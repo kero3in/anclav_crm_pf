@@ -1,0 +1,30 @@
+:root {
+  --text-main: #3c5043;
+  --text-muted: #9ca99d;
+  --bg-main: #f4f6f4;
+  --bg-card: #ffffff;
+  --border: rgba(156, 169, 157, 0.2);
+  --accent: #3c5043;
+  --accent-hover: #2a382f;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding-bottom: 80px; /* Отступ для плавающей корзины */
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Скрываем скроллбар для красоты горизонтальных списков */
+::-webkit-scrollbar {
+  display: none;
+}

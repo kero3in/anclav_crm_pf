@@ -3,7 +3,7 @@
 A microservice-based CRM, loyalty system, and remote ordering platform built for a coffee shop network. 
 The system integrates physical POS terminals (aQsi) with Telegram Mini Apps (TMA) and provides a comprehensive analytics dashboard.
 
-## 🛠 Tech Stack
+## Tech Stack
 
 * **Backend:** Python, FastAPI, Aiogram 3 (Telegram Bot API)
 * **Database:** PostgreSQL (raw SQL via `psycopg2`)
@@ -11,7 +11,7 @@ The system integrates physical POS terminals (aQsi) with Telegram Mini Apps (TMA
 * **Infrastructure:** Docker, Docker Compose
 * **External APIs:** aQsi V4 API (Receipts & Terminals), Open-Meteo API (Weather data)
 
-## 🏗 Architecture & Services
+## Architecture & Services
 
 The application is containerized using Docker Compose and consists of 5 main services:
 
@@ -21,7 +21,7 @@ The application is containerized using Docker Compose and consists of 5 main ser
 4. `sync`: Background worker syncing receipt data from aQsi POS terminals to the local database for RFM and cohort analysis.
 5. `weather`: Background worker collecting hourly weather data for future correlation with sales metrics.
 
-## ✨ Key Features
+## Key Features
 
 * **Omnichannel Loyalty System:** Automatically links offline purchases (via POS terminal) with online Telegram profiles to calculate RFM segments and cohort retention.
 * **Telegram Mini App Ordering:** Guests can order and pay via a React-based TMA. Baristas receive real-time push notifications in the bot when a shift is open.
@@ -29,7 +29,7 @@ The application is containerized using Docker Compose and consists of 5 main ser
 * **Product Analytics Dashboard:** ABC-analysis, cross-sell (basket) analysis, and hourly load charts based on raw transactional data.
 * **Automated Feedback Loop:** Scheduled tasks (`asyncio`) request feedback 15 minutes after a confirmed visit and alert the owner on low ratings.
 
-## 🚀 Local Setup
+## Local Setup
 
 1. Clone the repository.
 2. Copy the environment variables template:
@@ -45,7 +45,7 @@ The application is containerized using Docker Compose and consists of 5 main ser
 The FastAPI backend will be available at `http://localhost:8000`.
 The PostgreSQL database is exposed on port `5433` (as configured in `docker-compose.yml`).
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 .
